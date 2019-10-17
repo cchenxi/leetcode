@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.addTwoNumbers;
+package com.cchenxi.leetcode.algorithm.p2;
 
 /**
  * You are given two non-empty linked lists representing two non-negative integers.

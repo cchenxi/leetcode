@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.addTwoNumbers;
+package com.cchenxi.leetcode.algorithm.p2;
 
 import org.junit.Test;
 
