@@ -17,7 +17,7 @@ import com.alibaba.fastjson.JSON;
  *
  * @author chenxi
  */
-public class Solution {
+public class MoveZeros {
     public void moveZeroes(int[] nums) {
         System.out.println("原始数组：" + JSON.toJSONString(nums));
         int j = 0;
