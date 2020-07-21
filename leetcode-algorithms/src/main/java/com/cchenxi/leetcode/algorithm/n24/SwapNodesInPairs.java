@@ -21,8 +21,35 @@ package com.cchenxi.leetcode.algorithm.n24;
  */
 public class SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {
-        return m1(head);
+
+        return m2(head);
     }
+
+    private ListNode m2(ListNode head) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode pre = dummy;
+
+        while (head != null && head.next != null) {
+            //定义需要交换的两个节点
+            ListNode first = head;
+            ListNode second = head.next;
+
+            //借助pre进行交换
+            //pre的下一个节点指向第二个节点
+            pre.next = second;
+            //第一个节点的next 指向第二个节点的next
+            first.next = second.next;
+            //第二个节点的next指向第一个节点 完成交换
+            second.next = first;
+
+            //准备用于处理下个循环的数据，即将pre和head位置确认
+            pre = first;
+            head = first.next;
+        }
+
+        return dummy.next;
+     }
 
     private ListNode m1(ListNode head) {
         ListNode dummy = new ListNode(-1);
@@ -44,4 +71,6 @@ public class SwapNodesInPairs {
 
         return dummy.next;
     }
+
+
 }
