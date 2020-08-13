@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
 public class TriangleTest {
     private Triangle c;
     private List<List<Integer>> cases;
+    private List<List<Integer>> cases1;
 
     @Before
     public void setUp() throws Exception {
@@ -26,12 +27,18 @@ public class TriangleTest {
                 Arrays.asList(6, 5, 7),
                 Arrays.asList(4, 1, 8, 3)
         );
+        cases1 = Arrays.asList(
+                Arrays.asList(-10)
+        );
     }
 
     @Test
     public void minimumTotal() {
         System.out.println(
                 c.minimumTotal(cases)
+        );
+        System.out.println(
+                c.m2(cases1)
         );
     }
 }

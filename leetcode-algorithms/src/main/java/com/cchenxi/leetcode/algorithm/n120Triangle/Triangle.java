@@ -31,6 +31,20 @@ import java.util.List;
  */
 public class Triangle {
     public int minimumTotal(List<List<Integer>> triangle) {
+        return m1(triangle);
+    }
+
+    /**
+     * 暴力求解
+     *
+     * 从上往下
+     * 从正数第2行开始
+     * 注意控制边界
+     *
+     * @param triangle
+     * @return
+     */
+    public int m1(List<List<Integer>> triangle) {
         if (triangle == null || triangle.isEmpty()) {
             return 0;
         }
@@ -61,5 +75,24 @@ public class Triangle {
         }
 
         return 0;
+    }
+
+    /**
+     * 自下往上
+     * f(i, j) += Math.min(f(i + 1, j), f(i + 1, j + 1))
+     *
+     * @param triangle
+     * @return
+     */
+    public int m2(List<List<Integer>> triangle) {
+        for (int i = triangle.size() - 2; i >= 0; i--) {
+            List<Integer> currentRow = triangle.get(i);
+            for (int j = 0; j <= i; j++) {
+                int bottomLeft = triangle.get(i + 1).get(j);
+                int bottomRight = triangle.get(i + 1).get(j + 1);
+                currentRow.set(j, Math.min(bottomLeft, bottomRight) + currentRow.get(j));
+            }
+        }
+        return triangle.get(0).get(0);
     }
 }
