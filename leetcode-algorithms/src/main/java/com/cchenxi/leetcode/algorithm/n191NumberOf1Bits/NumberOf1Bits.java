@@ -36,10 +36,34 @@ package com.cchenxi.leetcode.algorithm.n191NumberOf1Bits;
  */
 public class NumberOf1Bits {
     public int hammingWeight(int n) {
+        return m2(n);
+    }
+
+    /**
+     * 技巧
+     * n & (n-1)可以消除低位的1
+     *
+     * @param n
+     * @return
+     */
+    public int m1(int n) {
         int count = 0;
         while (n != 0) {
             count++;
             n = n & (n - 1);
+        }
+        return count;
+    }
+
+    private int m2(int n) {
+        int count = 0;
+        int mask = 1;
+
+        for (int i = 0; i < 32; i++) {
+            if ((n & mask) != 0) {
+                count++;
+            }
+            mask <<= 1;
         }
         return count;
     }
