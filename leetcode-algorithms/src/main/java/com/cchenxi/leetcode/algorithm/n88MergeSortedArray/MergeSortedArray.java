@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n88;
+package com.cchenxi.leetcode.algorithm.n88MergeSortedArray;
 
 import java.util.Arrays;
 
