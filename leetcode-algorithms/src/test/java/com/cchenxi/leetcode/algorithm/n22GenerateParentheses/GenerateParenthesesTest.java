@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n22;
+package com.cchenxi.leetcode.algorithm.n22GenerateParentheses;
 
 import java.util.List;
 

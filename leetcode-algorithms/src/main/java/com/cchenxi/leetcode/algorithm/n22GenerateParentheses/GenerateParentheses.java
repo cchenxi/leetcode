@@ -1,6 +1,7 @@
-package com.cchenxi.leetcode.algorithm.n22;
+package com.cchenxi.leetcode.algorithm.n22GenerateParentheses;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -29,7 +30,32 @@ import java.util.List;
  */
 public class GenerateParentheses {
     public List<String> generateParenthesis(int n) {
-        return m1(n);
+//        return m1(n);
+        return m2(n);
+    }
+
+    private List<String> m2(int n) {
+        if (n < 1) {
+            return Collections.emptyList();
+        }
+
+        List<String> result = new ArrayList<>();
+
+        helper(result, n, n, "");
+        return result;
+    }
+
+    private void helper(List<String> result, int left, int right, String current) {
+        if (left == 0 && right == 0) {
+            result.add(current);
+            return;
+        }
+        if (left > 0) {
+            helper(result, left - 1, right, current + "(");
+        }
+        if (right > left) {
+            helper(result, left, right - 1, current + ")");
+        }
     }
 
     public List<String> m1(int n) {
