@@ -126,4 +126,38 @@ public class ValidateBinarySearchTree {
         }
         return helper(root.left, minValue, root.val) && helper(root.right, root.val, maxValue);
     }
+
+    /**
+     * 中序遍历
+     *
+     * 中序遍历的结果是有序的
+     *
+     * @param root
+     * @return
+     */
+    Integer pre = null;
+    boolean result = true;
+
+    public boolean m4(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        helper(root);
+        return result;
+    }
+
+    private void helper(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        helper(root.left);
+
+        if (pre != null && root.val <= pre) {
+            result = false;
+        }
+        pre = root.val;
+
+        helper(root.right);
+    }
 }
