@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.sort;
+package com.cchenxi.leetcode.algorithm.demo.sort;
 
 /**
  * 插入排序

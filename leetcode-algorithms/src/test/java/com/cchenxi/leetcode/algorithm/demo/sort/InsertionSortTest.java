@@ -1,9 +1,7 @@
-package com.cchenxi.leetcode.algorithm.sort;
+package com.cchenxi.leetcode.algorithm.demo.sort;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Date: 2020-08-16
