@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n98;
+package com.cchenxi.leetcode.algorithm.n98ValidateBinarySearchTree;
 
 import org.junit.Test;
 

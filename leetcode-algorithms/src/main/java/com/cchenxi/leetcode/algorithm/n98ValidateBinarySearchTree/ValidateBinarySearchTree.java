@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n98;
+package com.cchenxi.leetcode.algorithm.n98ValidateBinarySearchTree;
 
 import java.util.Stack;
 
@@ -39,7 +39,7 @@ import java.util.Stack;
  */
 public class ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {
-        return m2(root);
+        return m3(root);
     }
 
     /**
@@ -101,5 +101,29 @@ public class ValidateBinarySearchTree {
             return false;
         }
         return true;
+    }
+
+    /**
+     * 递归
+     *
+     * @param root
+     * @return
+     */
+    public boolean m3(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        return helper(root.left, Long.MIN_VALUE, root.val) && helper(root.right, root.val, Long.MAX_VALUE);
+    }
+
+    private boolean helper(TreeNode root, long minValue, long maxValue) {
+        if (root == null) {
+            return true;
+        }
+        if (root.val <= minValue || root.val >= maxValue) {
+            return false;
+        }
+        return helper(root.left, minValue, root.val) && helper(root.right, root.val, maxValue);
     }
 }
