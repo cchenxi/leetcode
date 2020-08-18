@@ -8,7 +8,7 @@ package com.cchenxi.leetcode.algorithm.demo.treeSearch;
  */
 public class TwoTreeNode {
     public int val;
-    public com.cchenxi.algorithm.search.TwoTreeNode left, right;
+    public TwoTreeNode left, right;
 
     public TwoTreeNode(int val) {
         this.val = val;

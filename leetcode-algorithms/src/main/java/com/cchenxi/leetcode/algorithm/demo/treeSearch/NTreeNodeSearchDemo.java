@@ -21,17 +21,17 @@ public class NTreeNodeSearchDemo {
      * @param root
      * @return
      */
-    public List<Integer> dfs(com.cchenxi.algorithm.search.NTreeNode root) {
+    public List<Integer> dfs(NTreeNode root) {
         if (root == null) {
             return Collections.emptyList();
         }
         List<Integer> result = new ArrayList<>();
-        Set<com.cchenxi.algorithm.search.NTreeNode> visited = new HashSet<>();
+        Set<NTreeNode> visited = new HashSet<>();
         help(root, visited, result);
         return result;
     }
 
-    private void help(com.cchenxi.algorithm.search.NTreeNode root, Set<com.cchenxi.algorithm.search.NTreeNode> visited, List<Integer> result) {
+    private void help(NTreeNode root, Set<NTreeNode> visited, List<Integer> result) {
         if (root == null || visited.contains(root)) {
             return;
         }
@@ -48,17 +48,17 @@ public class NTreeNodeSearchDemo {
      * @param root
      * @return
      */
-    public List<Integer> bfs(com.cchenxi.algorithm.search.NTreeNode root) {
+    public List<Integer> bfs(NTreeNode root) {
         if (root == null) {
             return Collections.emptyList();
         }
         List<Integer> result = new ArrayList<>();
-        Queue<com.cchenxi.algorithm.search.NTreeNode> nodes = new LinkedList<>();
+        Queue<NTreeNode> nodes = new LinkedList<>();
         nodes.add(root);
         while (!nodes.isEmpty()) {
             int size = nodes.size();
             for (int i = 0; i < size; i++) {
-                com.cchenxi.algorithm.search.NTreeNode node = nodes.poll();
+                NTreeNode node = nodes.poll();
                 result.add(node.val);
                 if (node.children != null) {
                     node.children.forEach(c -> {
