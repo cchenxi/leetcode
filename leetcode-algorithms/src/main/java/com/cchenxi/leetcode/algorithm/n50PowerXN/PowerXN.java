@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n50;
+package com.cchenxi.leetcode.algorithm.n50PowerXN;
 
 /**
  * 实现 pow(x, n) ，即计算 x 的 n 次幂函数。
@@ -36,6 +36,8 @@ public class PowerXN {
 
     /**
      * 分治
+     * pow(x, n)
+     * sub problem pow(x, n/2)
      * x^(n/2) * x^(n/2)
      *
      * @param x
@@ -56,7 +58,7 @@ public class PowerXN {
             return 1d;
         }
         double half = fastPow(x, n / 2);
-        if (n % 2 == 0) {
+        if ((n & 1) == 0) {
             return half * half;
         } else {
             return half * half * x;

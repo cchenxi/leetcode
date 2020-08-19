@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n50;
+package com.cchenxi.leetcode.algorithm.n50PowerXN;
 
 import org.junit.Test;
 
@@ -12,6 +12,6 @@ public class PowerXNTest {
     @Test
     public void myPow() {
         PowerXN c = new PowerXN();
-        System.out.println(c.myPow(2, -1));
+        System.out.println(c.myPow(2, -10));
     }
 }
