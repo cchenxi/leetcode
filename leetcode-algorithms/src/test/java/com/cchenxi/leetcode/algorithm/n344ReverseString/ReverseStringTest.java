@@ -1,8 +1,6 @@
-package com.cchenxi.leetcode.algorithm.p344;
+package com.cchenxi.leetcode.algorithm.n344ReverseString;
 
 import org.junit.Test;
-
-import com.alibaba.fastjson.JSON;
 
 /**
  * Date: 2019-10-31
@@ -16,6 +14,6 @@ public class ReverseStringTest {
         char[] s = {'a'};
         ReverseString reverseString = new ReverseString();
         reverseString.reverseString(s);
-        System.out.println(JSON.toJSONString(s));
+        System.out.println(String.valueOf(s));
     }
 }
