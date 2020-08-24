@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * TODO: description
  * Date: 2020-08-23
@@ -21,14 +19,14 @@ public class TwoSumTest {
 
     @Test
     public void twoSum() {
-        TwoSum c = new Solution();
+        TwoSum c = new Solution11();
         int[] result = c.twoSum(nums, 9);
         Assert.assertArrayEquals(new int[]{0, 1}, result);
     }
 
     @Test
     public void twoSum2() {
-        TwoSum c = new Solution2();
+        TwoSum c = new Solution12();
         int[] result = c.twoSum(nums, 9);
         Assert.assertArrayEquals(new int[]{1, 0}, result);
     }

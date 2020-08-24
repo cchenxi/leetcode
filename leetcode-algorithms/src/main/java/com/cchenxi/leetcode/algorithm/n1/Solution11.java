@@ -5,7 +5,7 @@ package com.cchenxi.leetcode.algorithm.n1;
  *
  * @author chenxi
  */
-public class Solution implements TwoSum {
+public class Solution11 implements TwoSum {
     @Override
     public int[] twoSum(int[] nums, int target) {
         if (nums.length == 0) {
