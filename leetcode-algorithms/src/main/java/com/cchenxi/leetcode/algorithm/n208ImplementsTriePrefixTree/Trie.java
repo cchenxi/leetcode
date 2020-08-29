@@ -46,6 +46,7 @@ public class Trie {
             node = node.children[index];
         }
         node.isWord = true;
+        node.word = word;
     }
 
     /**
