@@ -30,4 +30,11 @@ public class TwoSumTest {
         int[] result = c.twoSum(nums, 9);
         Assert.assertArrayEquals(new int[]{1, 0}, result);
     }
+
+    @Test
+    public void twoSum_2_1() {
+        TwoSum c = new Solution_2_1();
+        int[] result = c.twoSum(nums, 9);
+        Assert.assertArrayEquals(new int[]{1, 0}, result);
+    }
 }
