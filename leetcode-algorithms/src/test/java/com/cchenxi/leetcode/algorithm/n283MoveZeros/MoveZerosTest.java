@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n283;
+package com.cchenxi.leetcode.algorithm.n283MoveZeros;
 
 import org.junit.Test;
 
