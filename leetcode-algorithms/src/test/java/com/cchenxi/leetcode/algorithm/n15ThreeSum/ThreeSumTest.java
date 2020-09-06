@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n15;
+package com.cchenxi.leetcode.algorithm.n15ThreeSum;
 
 import java.util.List;
 
