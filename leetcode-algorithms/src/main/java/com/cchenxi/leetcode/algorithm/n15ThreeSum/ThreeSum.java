@@ -1,4 +1,4 @@
-package com.cchenxi.leetcode.algorithm.n15;
+package com.cchenxi.leetcode.algorithm.n15ThreeSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -86,6 +86,7 @@ public class ThreeSum {
                     list.sort(Comparator.naturalOrder());
                     result.add(list);
                 } else {
+                    // 因为不需要下标 所以不同于2sum，这里存的是值
                     map.put(nums[j], nums[j]);
                 }
             }
