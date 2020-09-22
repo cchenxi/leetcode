@@ -14,4 +14,11 @@ public class PowerXNTest {
         PowerXN c = new PowerXN();
         System.out.println(c.myPow(2, -10));
     }
+
+    @Test
+    public void pow() {
+        PowXXN c = new Solution_4_1();
+
+        System.out.println(c.myPow(2, 3));
+    }
 }
