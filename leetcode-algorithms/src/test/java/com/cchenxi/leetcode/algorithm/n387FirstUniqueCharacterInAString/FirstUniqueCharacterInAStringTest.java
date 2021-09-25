@@ -3,8 +3,6 @@ package com.cchenxi.leetcode.algorithm.n387FirstUniqueCharacterInAString;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Date: 2020-08-22
  *
@@ -20,7 +18,7 @@ public class FirstUniqueCharacterInAStringTest {
 
     @Test
     public void firstUniqChar() {
-        String s = "leetcode";
+        String s = "io/github/cchenxi/leetcode";
         System.out.println(c.firstUniqChar(s));
     }
 }
